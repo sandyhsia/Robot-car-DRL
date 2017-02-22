@@ -2,7 +2,7 @@
 
 
 View from top:
-![View from top](https://dpr/i/cRm2)
+![bird_view.jpg](https://dpr/i/cRm2)
 
 View from one side:
 ![View from one side](https://d.pr/QaOD)
