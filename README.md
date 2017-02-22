@@ -1,14 +1,11 @@
 # Robot-car-DRL
 
 
-View from top:
-![bird_view](https://dpr/i/cRm2)
+![view from top](https://dpr/i/cRm2)
 
-View from one side:
-![View from one side](https://d.pr/QaOD)
+![view from one side](https://d.pr/QaOD)
 
-View from bottom:
-![View from bottom](https://d.pr/os04)
+![view from bottom](https://d.pr/os04)
 
 
 ## 2017.02.22
