@@ -3,9 +3,7 @@
 
 ![view from top](Pics/bird_view.jpg)
 
-![view from one side](https://d.pr/QaOD)
-
-![view from bottom](https://d.pr/os04)
+#### More images about robot-car-agent, please go to /Pics/ :)
 
 
 ## 2017.02.22
