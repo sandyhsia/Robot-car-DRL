@@ -12,3 +12,14 @@
 ### Solution:
 
 #### Command sent-out rate from PC is set to ~200ms, and Arduino send a "Send" command to esp8266 at about first 50ms as soon as it recognizes the formatted command, and then write back the feedback info. Then it delay the rest of the time (for about 130ms), then check the buffer and see if there is any new command info. 
+
+## 2017.02.22
+
+### Problem:
+
+#### Async-threads Communication:
+#### Threads can be run at background, so you can't expect them executed in sequence!!! But according to your thread "run(self)" function, those logics are run sequencially!!!!!
+
+### Solution:
+#### Make sure your don't get lost in one previous loop, but actually you think you can update this variable, which related to jump out the loop in next sequencial function.
+#### Also, in mul-threads programming, the lock.acquire() and  lock.release() are PAIRED at any moment. Make sure you touch the shared variables with "lock".
