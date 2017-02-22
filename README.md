@@ -1,7 +1,7 @@
 # Robot-car-DRL
 
 
-![view from top](https://dpr/i/cRm2)
+![view from top](Pics/bird_view.jpg)
 
 ![view from one side](https://d.pr/QaOD)
 
