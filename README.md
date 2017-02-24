@@ -10,12 +10,15 @@
 
 ### 1 Achievements:
 > Using 'Easy PID + PWM Tuning'  to have a soft turning. 
+
 > Implement async-threads communication. Using 2 shared 'Queues' to exchange 'instructions' and 'feedback' so that two threads can somehow have synchronization.
 
 ### 2.1 Hardware Problems
 > My 'Arduino Uno R3' actually come from Taobao. 
+
 > 1) 'AMS1117' chip on one board, which is used to convert input (~7.5 Volt now) to power arduino, has problem on pin voltage. 
 > Result is that *this* Arduino Uno R3  can only use USB to set up power. (picture in Appendix/HardwareDocs)
+
 > 2) 'LP2985' chip on another board, which is used to convert 5 Volt to 3.3 Volt as power pin, has problem...  
 > Result is that 3.3 Volt power pin output is not stable (so that my esp8266 wifi module can't work). (picture in Appendix/HardwareDocs)
 
@@ -24,7 +27,9 @@
 
 ### 2.2 Tips
 > At least, test your power pin first. If having problem, refer to 'Appendix / Hardware Docs', and check the input/output voltage on related chip pins. 
+
 > Buy a voltage-meter and don't cry. 
+
 > Considering to use 6 pieces of Nanfu No.5 batteries (~9 Volt) to power up the Arduino board and motor-driving-board together. So far, power modules are separated. 
 
 ## 2017.02.22
