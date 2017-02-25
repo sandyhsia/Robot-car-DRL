@@ -64,10 +64,10 @@ unsigned long incomeUp;
 // Pin Constants
 const int EApin = 5; //motor driver enable: analong Write to control speed
 const int EBpin = 6; //motor driver enable: analong Write to control speed
-const int leftmotorpin1 = 7; // 直流电机信号输出
-const int leftmotorpin2 = 8;
-const byte rightmotorpin1 = 10;
-const byte rightmotorpin2 = 11;
+const int rightmotorpin1 = 7; // 直流电机信号输出
+const int rightmotorpin2 = 8;
+const byte leftmotorpin1 = 10;
+const byte leftmotorpin2 = 11;
 
 
 void setup() {
@@ -356,10 +356,10 @@ void forwards(int forward_speed){
   //running = true;
   analogWrite(EApin, forward_speed);
   analogWrite(EBpin, forward_speed);
-  digitalWrite(leftmotorpin1, HIGH);
-  digitalWrite(leftmotorpin2, LOW);
   digitalWrite(rightmotorpin1, HIGH);
-  digitalWrite(rightmotorpin2, LOW); 
+  digitalWrite(rightmotorpin2, LOW);
+  digitalWrite(leftmotorpin1, HIGH);
+  digitalWrite(leftmotorpin2, LOW); 
   return ;
 }
 
@@ -368,10 +368,10 @@ void backwards(int back_speed){
   //running = true;
   analogWrite(EApin, back_speed);
   analogWrite(EBpin, back_speed);
-  digitalWrite(leftmotorpin1, LOW);
-  digitalWrite(leftmotorpin2, HIGH);
   digitalWrite(rightmotorpin1, LOW);
-  digitalWrite(rightmotorpin2, HIGH); 
+  digitalWrite(rightmotorpin2, HIGH);
+  digitalWrite(leftmotorpin1, LOW);
+  digitalWrite(leftmotorpin2, HIGH); 
   return ;
 }
 
@@ -379,10 +379,10 @@ void backwards(int back_speed){
 void leftwards(int left_speed){
    analogWrite(EApin, left_speed);
    analogWrite(EBpin, left_speed);
-   digitalWrite(leftmotorpin1, HIGH);
-   digitalWrite(leftmotorpin2, LOW);
-   digitalWrite(rightmotorpin1, LOW);
-   digitalWrite(rightmotorpin2, HIGH);
+   digitalWrite(rightmotorpin1, HIGH);
+   digitalWrite(rightmotorpin2, LOW);
+   digitalWrite(leftmotorpin1, LOW);
+   digitalWrite(leftmotorpin2, HIGH);
    return ;
 }
 
@@ -391,10 +391,10 @@ void leftwards(int left_speed){
 void rightwards(int right_speed){
    analogWrite(EApin, right_speed);
    analogWrite(EBpin, right_speed);
-   digitalWrite(leftmotorpin1, LOW);
-   digitalWrite(leftmotorpin2, HIGH);
-   digitalWrite(rightmotorpin1, HIGH);
-   digitalWrite(rightmotorpin2, LOW);
+   digitalWrite(rightmotorpin1, LOW);
+   digitalWrite(rightmotorpin2, HIGH);
+   digitalWrite(leftmotorpin1, HIGH);
+   digitalWrite(leftmotorpin2, LOW);
    return ;
 }
 
@@ -402,10 +402,10 @@ void stops(){
   //running = false;
   analogWrite(EApin, 0);
   analogWrite(EBpin, 0);
-  digitalWrite(leftmotorpin1,HIGH);
-  digitalWrite(leftmotorpin2, HIGH);
-  digitalWrite(rightmotorpin1, HIGH);
-  digitalWrite(rightmotorpin2, HIGH); 
+  digitalWrite(rightmotorpin1,HIGH);
+  digitalWrite(rightmotorpin2, HIGH);
+  digitalWrite(leftmotorpin1, HIGH);
+  digitalWrite(leftmotorpin2, HIGH); 
   return ;
 }
 
@@ -599,7 +599,7 @@ int check_recover(){
 
    i = 0;
    while(i < 8){
-    if(convert_command[i] == 'w' or convert_command[i] == 's' or convert_command[i] == 'a' or convert_command[i] == 'd' or convert_command[i] == 'q'){
+    if(convert_command[i] == 'w' or convert_command[i] == 's' or convert_command[i] == 'a' or convert_command[i] == 'd'){
       get_direction = 1;
       restore_command[3]= convert_command[i];
       break;
